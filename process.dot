@@ -1,0 +1,28 @@
+digraph G {
+	node [shape=box style=filled]
+	rankdir=TB
+	subgraph child {
+		rank=same
+		1 [label=black color=black group=1]
+		2 [label="" fillcolor=white group=2]
+		3 [label=black color=black group=3]
+		4 [label="" fillcolor=white group=0]
+	}
+	subgraph child1 {
+		rank=same
+		5 [label="" fillcolor=white group=1]
+		6 [label=black color=black group=2]
+		7 [label="" fillcolor=white group=3]
+		8 [label=black color=black group=0]
+	}
+	1 -> 5
+	1 -> 2
+	2 -> 6
+	2 -> 3
+	3 -> 7
+	3 -> 4
+	4 -> 8
+	5 -> 6
+	6 -> 7
+	7 -> 8
+}
