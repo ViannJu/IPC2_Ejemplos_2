@@ -1,0 +1,17 @@
+body{
+    background: linear-gradient(to right, #0b8793, #360033);
+}
+
+.containerPrincipal{
+    min-height: 100vh;
+    align-items: center;
+    float: center;
+    justify-content: center;
+    display: flex; 
+}
+
+.card{
+    padding: 5px;
+    justify-content: center;
+    display: flex;
+}
