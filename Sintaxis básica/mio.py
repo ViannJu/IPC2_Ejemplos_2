@@ -1,5 +1,12 @@
-x = 10
+while True:
+    linea = input('> ')
+    if linea == 'fin':
+        break
+    print(linea)
+print('Terminado')
+
 y = 8
+x = 10
 
 if y > 9:
     print("Mayor a nueve")

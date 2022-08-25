@@ -1,34 +1,38 @@
-#Definir una clase padre
+#Definir clase padre
 class Animal:
+
+    __nombre = "Firulais"
+
     def __init__(self, especie):
         self.especie = especie
 
     def Hablar(self):
-        pass
+        print("Estoy hablando")
 
-    def Describeme(self):
-        print("Soy un animal de tipo: "+type(self).__name__)
-
-#Definir clases hijas
 class Perro(Animal):
     def __init__(self, hablar):
         self.hablar = hablar
 
     def Hablar(self):
-        print("Guau!")
+        print("Guau")
 
 class Abeja(Animal):
     def __init__(self, hablar):
         self.hablar = hablar
+        self.perrito = Perro()
 
     def Hablar(self):
-        print("Bzzz!")
+        print(self.hablar)
 
-    def Picar(self):
+    def picar(self):
         print("Te he picado!")
 
-#Declarar instancias
 miAbeja = Abeja("Bzzz!")
+miAbeja.picar()
 miAbeja.Hablar()
-miAbeja.Picar()
-miAbeja.Describeme()
+print(miAbeja.__nombre)
+miAbeja.perrito.hablar
+
+    
+
+

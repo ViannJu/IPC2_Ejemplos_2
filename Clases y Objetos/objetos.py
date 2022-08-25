@@ -1,21 +1,19 @@
-#Declarar la clase
+#Declaración de la clase espada
 class Espada:
     def __init__(self, material):
         self.material = material
 
     def Dañar(self):
-        print("Te he hecho daño con la espada de: "+self.material)
+        print("Daño con la espada de: "+self.material)
 
+#creando instancias
+espDiamante = Espada("Diamante")
+espDiamante.Dañar()
 
-#Crear instancias de la clase
-espadaDiamante = Espada("Diamante")
-espadaDiamante.Dañar()
+espHierro = Espada("Hierro")
+espHierro.Dañar()
 
-espadaMadera = Espada("Madera")
-espadaMadera.Dañar()
+espMadera = Espada("Madera")
+espMadera.Dañar()
 
-espadaHierro = Espada("Hierro")
-espadaHierro.Dañar()
-
-miVariable = espadaDiamante.material
-print("miVariable es: "+miVariable)
+print(type(espMadera))

@@ -1,4 +1,3 @@
-from re import subn
 from graphviz import Digraph
 
 class Nodo:
