@@ -106,7 +106,7 @@ class MatrizOrtogonal:
                 # se inserta al final
                 nodo.arriba = tmp
                 tmp.abajo = nodo
-                return tmp.abajo
+                return tmp.abajo #nodo nuevo
             
             # indice actual es igual a el nuevo índice
             if tmp.posVertical == nodo.posVertical :
@@ -151,7 +151,7 @@ class MatrizOrtogonal:
             if tmp.posHorizontal < nodo.posHorizontal and tmp.derecha.posHorizontal > nodo.posHorizontal:
                 # insertar un nodo en medio del nodo actual y del nodo siguiente
                 # asignar derecha y arriba para el nodo nuevo
-                nodo.derecho = tmp.derecha
+                nodo.derecha = tmp.derecha
                 nodo.izquierda = tmp
                 
                 tmp.derecha.izquierda = nodo # reasignar arriba para el nodo de derecha
@@ -161,7 +161,7 @@ class MatrizOrtogonal:
             # pasar al siguiente nodo derecha si esque no hubo return
             tmp = tmp.derecha
 
-    def insertarDato(self,dato,  posVertical, posHorizontal):
+    def insertarDato(self, dato,  posVertical, posHorizontal):
         # validar que los índices existan en horizontal y vertical
         indiceVertical = self.crearIndiceVertical(posVertical)
         indiceHorizontal = self.crearIndiceHorizontal(posHorizontal)
@@ -229,7 +229,6 @@ class MatrizOrtogonal:
         id = str(nodo.posVertical)+"_"+str(nodo.posHorizontal)
         grafo.node(id, nodo.dato,group=str(nodo.posHorizontal))
         
-
     def graficarFlechas(self, grafo, nodoE):
         nodo = nodoE
         id = str(nodo.posVertical)+"_"+str(nodo.posHorizontal)
