@@ -19,11 +19,12 @@ class MatrizOrtogonal:
         self.raiz.posVertical = 0
         self.raiz.posHorizontal = 0
 
-    def crearIndiceVertical(self, pos):
+    def crearIndiceVertical(self, pos): #posicion de fila
         # recorrer todos los nodos de manera vertical
         # creamos un temporal
         tmp = self.raiz
         while tmp != None:
+            
             # no existe el indice; solo hay índices menores
             if tmp.abajo == None and tmp.posVertical < pos:
                 # ya no hay más nodos en vertical
@@ -220,14 +221,15 @@ class MatrizOrtogonal:
                 tmpH = tmpH.derecha
 
             tmpV = tmpV.abajo
-        dot.view()
+        #dot.view()
+        dot.render(directory='').replace('\\', '/')
         pass
 
     def graficarNodos(self, grafo, nodoE):
         
         nodo = nodoE
         id = str(nodo.posVertical)+"_"+str(nodo.posHorizontal)
-        grafo.node(id, nodo.dato,group=str(nodo.posHorizontal))
+        grafo.node(id, nodo.dato, group=str(nodo.posHorizontal))
         
     def graficarFlechas(self, grafo, nodoE):
         nodo = nodoE

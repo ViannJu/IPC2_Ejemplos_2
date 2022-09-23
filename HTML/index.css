@@ -1,0 +1,50 @@
+.principal{
+    max-width: 100%;
+    background: linear-gradient(to right, #0b8793, #360033);
+    min-height: 100vh;
+    align-items: center;
+    float: center;
+    justify-content: center;
+    display: flex;  
+}
+  
+.card{
+    border-radius: 25px;
+    width: 25em;
+}
+
+.card .card-title{
+    text-align: center;
+}
+
+.card .card-body-row{
+padding: 5px;
+}
+
+.card .card-body-row-btn{
+padding: 5px;
+justify-content: center;
+display: flex;  
+}
+
+.card .btn{
+    text-align: center;
+    text-align: center;
+    border-radius: 35px;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 500;
+    background: linear-gradient(to right, #0b8793, #360033);
+    border: 2px;
+    cursor: pointer;
+    transition: opacity 0.25s;
+}
+
+.btn:hover{
+opacity: 0.8;
+}
+
+.btn{
+padding-left: 2.5rem;
+padding-right: 2.5rem;
+}
