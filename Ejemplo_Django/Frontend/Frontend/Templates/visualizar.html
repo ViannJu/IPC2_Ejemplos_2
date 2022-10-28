@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <h2 class="titulo"> Listado de Estudiantes </h2>
+</div>
+
+<div class="row">
+    <div class="container-table">
+        <table class="table table-striped" aria-describedby="lista de estudiantes">
+            <thead>
+            <tr>
+                <th scope="col">Carnet</th>
+                <th scope="col">Nombre</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for value in datos %}
+                <tr>
+                    <td>{{ value.carnet }}</td>
+                    <td>{{ value.nombre }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
